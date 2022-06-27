@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.springframework.org/schema/util
+    http://www.springframework.org/schema/util/spring-util.xsd">
+
+	<bean class="com.springcore.beans.Emp" name="emp">
+
+		<property name="name">
+			<value>Pritam Ray</value>
+		</property>
+
+		<property name="phones">
+			<list>
+				<value>8699535683</value>
+				<value>7649320222</value>
+				<value>6433223232</value>
+				<value>6535323233</value>
+			</list>
+		</property>
+
+		<property name="address">
+			<set>
+				<value>Rail</value>
+				<value>Asron</value>
+				<value>Ropar</value>
+				<value>Prem Nagar</value>
+			</set>
+		</property>
+
+		<property name="courses">
+			<map>
+				<entry key="Java" value="2months"></entry>
+				<entry key="Python" value="4months"></entry>
+				<entry key="C++" value="2months"></entry>
+				<entry key="Javascript" value="6months"></entry>
+			</map>
+
+		</property>
+
+
+		<property name="marks">
+			<props>
+				<prop key="English">70</prop>
+				<prop key="Maths">60</prop>
+				<prop key="Hindi">80</prop>
+				<prop key="Punjabi">150</prop>
+			</props>
+		</property>
+
+	</bean>
+
+</beans>

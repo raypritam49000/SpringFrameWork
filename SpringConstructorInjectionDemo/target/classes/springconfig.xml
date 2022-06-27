@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+	<!-- bean definitions here -->
+
+	<bean class="com.spring.core.model.User" name="user">
+		<constructor-arg>
+			<value>10</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>Pritam Ray</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>24</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>50000</value>
+		</constructor-arg>
+		<constructor-arg>
+			<list>
+				<value>8699535682</value>
+				<value>7696889454</value>
+				<value>7696708539</value>
+				<value>9877545717</value>
+			</list>
+		</constructor-arg>
+	</bean>
+	
+	
+	<bean class="com.spring.core.model.User" name="user1">
+		<constructor-arg>
+			<value>101</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>Raj Kumar</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>24</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>40000</value>
+		</constructor-arg>
+		<constructor-arg>
+			<list>
+				<value>9041535682</value>
+				<value>8921889454</value>
+				<value>7693408539</value>
+				<value>7534245717</value>
+			</list>
+		</constructor-arg>
+	</bean>
+
+</beans>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="com.spring.core.model.Address" name="address">
+       <constructor-arg value="Ropar" type="String"/>
+        <constructor-arg value="Punjab" type="String"/>
+    </bean>
+    
+    <bean class="com.spring.core.model.User" name="user">
+      <constructor-arg value="123" type="int"/>
+      <constructor-arg value="Pritam Ray" type="String"/>
+      <constructor-arg value="30000.0" type="double"/>
+       <constructor-arg ref="address" type="Address"/>
+    </bean>
+</beans>
