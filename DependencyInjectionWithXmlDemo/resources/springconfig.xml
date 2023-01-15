@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/util
+    http://www.springframework.org/schema/util/spring-util.xsd">
+
+	<util:list list-class="java.util.ArrayList" id="salary">
+		<value>30000.00</value>
+		<value>40000.00</value>
+	</util:list>
+
+	<util:list list-class="java.util.ArrayList" id="address">
+		<value>Prem Nagar</value>
+		<value>Asron</value>
+		<value>Ropar</value>
+	</util:list>
+
+	<util:set set-class="java.util.HashSet" id="phone">
+		<value>8699546362</value>
+		<value>9945546362</value>
+	</util:set>
+
+	<util:list list-class="java.util.Vector" id="subject">
+		<value>Maths</value>
+		<value>Punjabi</value>
+		<value>Hindi</value>
+	</util:list>
+
+	<util:map map-class="java.util.HashMap" id="marks">
+		<entry key="Hindi" value="55"></entry>
+		<entry key="Punjabi" value="85"></entry>
+		<entry key="English" value="75"></entry>
+	</util:map>
+
+	<util:properties id="qusAns">
+		<prop key="What is Java">Java is Programming Language</prop>
+		<prop key="What is Spring Framework">Spring Framework is a Framework of Framework</prop>
+	</util:properties>
+
+	<util:list id="courses">
+		<array value-type="java.lang.String">
+			<value>Java</value>
+			<value>Java Script</value>
+			<value>Angular</value>
+		</array>
+	</util:list>
+
+	<bean class="com.spring.core.entities.Course" name="course">
+     <property name="course" value="courses"></property>
+	</bean>
+
+	<bean class="com.spring.core.entities.Student" name="student">
+		<property name="id" value="123"></property>
+		<property name="name" value="Pritam Ray"></property>
+		<property name="salary" ref="salary"></property>
+		<property name="address" ref="address"></property>
+		<property name="phone" ref="phone"></property>
+		<property name="subject" ref="subject"></property>
+		<property name="marks" ref="marks"></property>
+		<property name="qusAns" ref="qusAns"></property>
+		<property name="course" ref="course"></property>
+	</bean>
+
+</beans>

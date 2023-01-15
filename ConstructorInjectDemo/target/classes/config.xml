@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean class="com.springcore.beans.Student" name="student1">
+		<constructor-arg>
+			<value>234</value>
+		</constructor-arg>
+
+		<constructor-arg>
+			<value>Pritam Ray</value>
+		</constructor-arg>
+
+		<constructor-arg>
+			<value>Prem Nagar</value>
+		</constructor-arg>
+	</bean>
+
+
+	<bean class="com.springcore.beans.Student" name="student2">
+		<constructor-arg value="2365" />
+        <constructor-arg value="Raj Kumar" />
+        <constructor-arg value="Asron" />
+    </bean>
+    
+    <bean class="com.springcore.beans.Student" name="student3" c:studentId="653" c:studentName="Suraj Mehta" c:studentAddress="Ropar" />
+
+</beans>
